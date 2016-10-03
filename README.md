@@ -1,3 +1,5 @@
+# :beer: Only forked to include [#187](https://github.com/basecamp/trix/pull/187), may not work! :beer:
+
 # Trix
 ### A Rich Text Editor for Everyday Writing
 
