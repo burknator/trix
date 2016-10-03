@@ -68,6 +68,13 @@ testGroup "Composition input", template: "editor_empty", ->
         pressKey "backspace", ->
           expectDocument "a \n"
 
+test "pressing return creates new block", (expectDocument) ->
+    typeCharacters "ab", ->
+      pressKey "return", ->
+        document = getDocument()
+        assert.equal document.getBlockCount(), 2
+        expectDocument "ab\n\n"
+
   # Simulates the sequence of events when pressing backspace at the end of a
   # word and updating it on Android (running older versions of System WebView)
   test "updating a composition", (expectDocument) ->
